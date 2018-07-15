@@ -19,12 +19,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~normalize.css/normalize.css";
+
 body {
   font-size: 14px;
   line-height: normal;
   font-family: "Roboto", "Arial", sans-serif;
   color: #000000;
   font-style: normal;
+  background-color: lightseagreen;
 }
 
 *,
