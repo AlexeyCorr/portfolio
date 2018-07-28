@@ -1,19 +1,22 @@
 <template>
   <div id="app">
     <Header/>
-    <HelloWorld msg="Hello Vue!"/>
+    <MainPage msg="Hello Vue!"/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import MainPage from './components/MainPage.vue';
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    MainPage,
     Header,
+    Footer,
   },
 };
 </script>
@@ -27,7 +30,13 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   color: #000000;
   font-style: normal;
-  background-color: lightseagreen;
+  background: linear-gradient(155deg, #e7eeed, #e7eeed 70%, #eee 70%);
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -46,7 +55,7 @@ img {
 }
 
 ul {
-     list-style: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   border: none;
@@ -72,5 +81,36 @@ input[type="radio"].visually-hidden {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 708px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 940px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1150px;
+  }
+}
+
+.title {
+  font-size: 20px;
+  color: #f97058;
+
+  margin: 0 0 10px;
+}
+
+.text {
+  font-size: 14px;
+  color: #333;
+
+  margin: 0 0 10px;
 }
 </style>
