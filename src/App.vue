@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <MainPage msg="Hello Vue!"/>
+    <MainPage/>
     <Footer/>
   </div>
 </template>
@@ -30,7 +30,7 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   color: #000000;
   font-style: normal;
-  background: linear-gradient(155deg, #e7eeed, #e7eeed 70%, #eee 70%);
+  background-color: #e7eeed;
 }
 
 #app {
@@ -98,19 +98,5 @@ input[type="radio"].visually-hidden {
   @media (min-width: 1200px) {
     width: 1150px;
   }
-}
-
-.title {
-  font-size: 20px;
-  color: #f97058;
-
-  margin: 0 0 10px;
-}
-
-.text {
-  font-size: 14px;
-  color: #333;
-
-  margin: 0 0 10px;
 }
 </style>

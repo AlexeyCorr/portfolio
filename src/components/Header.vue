@@ -1,7 +1,7 @@
 <template>
   <header class="header" :class="{ 'menu--opened': isOpen }">
     <div class="container header__wrapper">
-      <a class="header__logo">
+      <a class="header__logo" href="#">
         <img src="../assets/img/icon-logo.svg" alt="logo" width="50" height="50">
       </a>
       <button class="header__toggle" type="button" @click="openMenu">
@@ -10,7 +10,7 @@
       <Menu/>
       <div class="header__board">
         <h1 class="header__title">
-          Front-end Developer
+          Junior Front-end Developer
         </h1>
         <div class="header__pic">
           <img src="../assets/img/rise.jpg" alt="My photo">
