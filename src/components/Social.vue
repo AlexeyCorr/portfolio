@@ -3,7 +3,10 @@
     <p class="social__text" v-if="socialText">{{ socialText }}</p>
     <ul class="social__list">
       <li class="social__item" v-for="social in socialList" :key="social.id">
-        <a class="social__link" :class="'social__link--' + social.icon"  :href="social.link" target="_blank">
+        <a class="social__link" :class="'social__link--' + social.icon" :href="social.link" target="_blank">
+          <svg width="20" height="20">
+            <use :xlink:href="'#' + social.icon"></use>
+          </svg>
           <span class="visually-hidden">{{ social.name }}</span>
         </a>
       </li>
@@ -17,7 +20,7 @@ export default {
   props: {
     socialText: String,
   },
-  data() {
+  data: function () {
     return {
       socialList: [
         {
@@ -85,36 +88,61 @@ export default {
 
 .social__link {
   display: block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin: 2px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70%;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+
+  svg {
+    transition: all 0.2s ease-in-out;
+  }
 
   &--email {
-    background-image: url("../assets/img/icons/icon-email.svg");
+    &:hover,
+    &:focus {
+      svg {
+        fill: #fbd00a;
+      }
+    }
   }
-
   &--github {
-    background-image: url("../assets/img/icons/icon-github.svg");
+    &:hover,
+    &:focus {
+      svg {
+        fill: #8c43ff;
+      }
+    }
   }
-
   &--telegram {
-    background-image: url("../assets/img/icons/icon-telegram.svg");
+    &:hover,
+    &:focus {
+      svg {
+        fill: #2ca5e0;
+      }
+    }
   }
-
   &--vk {
-    background-image: url("../assets/img/icons/icon-vk.svg");
+    &:hover,
+    &:focus {
+      svg {
+        fill: #6089c0;
+      }
+    }
   }
-
   &--codepen {
-    background-image: url("../assets/img/icons/icon-codepen.svg");
+    &:hover,
+    &:focus {
+      svg {
+        fill: #f97058;
+      }
+    }
   }
-
   &--instagram {
-    background-image: url("../assets/img/icons/icon-instagram.svg");
+    &:hover,
+    &:focus {
+      svg {
+        fill: #d23287;
+      }
+    }
   }
 }
 </style>

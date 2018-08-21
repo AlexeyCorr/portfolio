@@ -27,15 +27,15 @@ import Menu from "./Menu.vue";
 export default {
   name: "Header",
   components: {
-    Menu
+    Menu,
   },
-  data() {
+  data: function () {
     return {
       isOpen: false,
     };
   },
   methods: {
-    openMenu: function() {
+    openMenu: function () {
       if (!this.isOpen) {
         this.isOpen = true;
       } else {
@@ -59,7 +59,7 @@ export default {
   grid-row-gap: 30px;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 
 .header__logo {
@@ -76,6 +76,7 @@ export default {
   text-align: center;
   font-size: 2em;
   color: #fff;
+  font-family: 'Montserrat Subrayada', sans-serif;
 
   margin: 10px;
 }
@@ -91,7 +92,7 @@ export default {
 .header__toggle {
   position: fixed;
   top: 14px;
-  right: 20px;
+  right: 15px;
   z-index: 100;
   width: 30px;
   height: 40px;

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Symbols/>
     <Header/>
     <MainPage/>
     <Footer/>
@@ -7,6 +8,7 @@
 </template>
 
 <script>
+import Symbols from './components/Symbols.vue';
 import MainPage from './components/MainPage.vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
@@ -14,6 +16,7 @@ import Footer from './components/Footer.vue';
 export default {
   name: 'app',
   components: {
+    Symbols,
     MainPage,
     Header,
     Footer,
@@ -27,7 +30,7 @@ export default {
 body {
   font-size: 14px;
   line-height: normal;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: 'Montserrat', "Arial", sans-serif;
   color: #000000;
   font-style: normal;
   background-color: #e7eeed;
@@ -84,7 +87,7 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  min-width: 320px;
+  min-width: 290px;
   margin: 0 auto;
 
   @media (min-width: 768px) {

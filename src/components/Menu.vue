@@ -8,7 +8,7 @@
           </a>
         </li>
       </ul>
-      <a class="menu__link menu__link--contact" href="#" @click.prevent="openContact">Contact</a>
+      <a class="menu__link menu__link--contact" href="#" @click.prevent="openContact">Contacts</a>
       <Social socialText = "Get in touch"/>
     </nav>
     <Popup/>
@@ -25,13 +25,13 @@ export default {
     Social,
     Popup,
   },
-  data() {
+  data: function () {
     return {
       menuItems: [
-        { id: 1, item: 'About', link: 'link', },
-        { id: 2, item: 'Skills', link: 'link', },
-        { id: 3, item: 'Education', link: 'link', },
-        { id: 4, item: 'Works', link: 'link' },
+        { id: 1, item: 'About', link: '#about', },
+        { id: 2, item: 'Skills', link: '#skills', },
+        { id: 3, item: 'Education', link: '#education', },
+        { id: 4, item: 'Works', link: '#works' },
       ],
     };
   },
@@ -84,6 +84,7 @@ export default {
   position: relative;
   display: inline;
   padding: 10px 0;
+  transition: all 0.2s ease-in-out;
 
   &--active {
     color: #f97058;

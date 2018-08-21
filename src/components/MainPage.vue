@@ -1,6 +1,6 @@
 <template>
   <main class="main-page">
-    <Section v-for="section in sectionData" :key="section.id" :title="section.title" :text="section.text" :class="section.bg"/>
+    <Section v-for="section in sectionData" :key="section.id" :title="section.title" :text="section.text" :component="section.component" :id="section.link"/>
   </main>
 </template>
 
@@ -12,30 +12,36 @@ export default {
   components: {
     Section,
   },
-  data() {
+  data: function () {
     return {
       sectionData: [
         {
           id: 1,
-          title: `Hi, I'm Alexey. Nice to meet you.`,
-          text: `Since beginning of my journey to the world of web development a year has passed.`,
+          title: "About me",
+          text: "Hi, I'm Alexey. Nice to meet you.",
+          component: 'About',
+          link: 'about',
         },
         {
           id: 2,
-          title: `Skills`,
-          text: `My skills`,
-          bg: `section--orange`,
+          title: 'Skills',
+          text: 'My skills',
+          component: 'Skills',
+          link: 'skills',
         },
         {
           id: 3,
-          title: `Education`,
-          text: ``,
+          title: 'Education',
+          text: '',
+          component: 'Education',
+          link: 'education',
         },
         {
           id: 4,
-          title: `Works`,
-          text: ``,
-          bg: `section--orange`,
+          title: 'Works',
+          text: '',
+          component: 'Works',
+          link: 'works',
         },
       ],
     };

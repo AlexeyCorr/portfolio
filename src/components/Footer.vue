@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p class="footer__text">AlexeyCorr - Moscow {{ getDate() }}</p>
+    <p class="footer__text">&#169;AlexeyCorr - Moscow {{ getDate() }}</p>
     <Social/>
   </footer>
 </template>

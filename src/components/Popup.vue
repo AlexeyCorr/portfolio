@@ -4,7 +4,7 @@
         <span class="visually-hidden">Close</span>
       </button>
       <h2 class="popup__title">Contact me</h2>
-      <p class="popup__mail">alexeycorr@gmail.com</p>
+      <a class="popup__mail" href="mailto:alexeycorr@gmail.com">alexeycorr@gmail.com</a>
       <Social socialText="Social"/>  
     </section>
 </template>
@@ -18,7 +18,7 @@ export default {
     Social,
   },
   methods: {
-    popupClose: function() {
+    popupClose: function () {
       const popup = document.querySelector('.popup');
       popup.classList.remove('popup--visibility');
     },
@@ -101,9 +101,33 @@ export default {
 }
 
 .popup__mail {
+  color: #000;
   font-size: 52px;
   font-weight: 700;
 
+  position: relative;
   margin: 0 0 15px;
+  padding: 0 0 5px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: #8C43FF;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #8C43FF;
+    transition: all 0.2s ease-in-out;
+  }
 }
 </style>
